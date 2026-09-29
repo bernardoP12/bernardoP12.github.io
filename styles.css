@@ -1,17 +1,22 @@
 body {
   background-color: #b3b3b3;
 }
+
 .fotografias {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   gap: 10px;
+}
+
+main img {
+  width: 100%;
 }
 
 .fotografias img {
   width: 150px;
   border-radius: 20px;
 }
+
 section {
   height: 100vh;
 }
@@ -76,7 +81,7 @@ nav a {
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .disciplina {
     flex-direction: column;
   }
@@ -85,6 +90,7 @@ nav a {
     width: 100%;
   }
 }
+
 /* Menu das páginas da cidade */
 header nav,
 body > nav {
@@ -102,7 +108,7 @@ body > nav a {
   border-radius: 20px;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   body {
     padding-bottom: 60px;
   }
@@ -126,6 +132,7 @@ body > nav a {
     font-size: 14px;
   }
 }
+
 /* Página multimédia */
 .sec-fotos,
 .sec-video,
@@ -160,6 +167,7 @@ body > nav a {
   font-size: 5vw;
   color: white;
 }
+
 /* Página de localização */
 .localizacao {
   display: flex;
@@ -176,11 +184,12 @@ body > nav a {
   border: 0;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .localizacao {
     flex-direction: column;
   }
 }
+
 /* Página de informações */
 main {
   display: grid;
@@ -210,8 +219,4 @@ main {
 
 .img2 {
   grid-area: img2;
-}
-
-main img {
-  width: 100%;
 }
