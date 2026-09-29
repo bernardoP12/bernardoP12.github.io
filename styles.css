@@ -24,7 +24,7 @@ section {
 /* Hero */
 .hero {
   position: relative;
-  background-image: url("lab2/images/AA.jpg");
+  background-image: url("images/diw.svg");
   background-size: cover;
   color: white;
 }
