@@ -12,3 +12,206 @@ body {
   width: 150px;
   border-radius: 20px;
 }
+section {
+  height: 100vh;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background-image: url("lab2/images/AA.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.hero-texto {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* Projetos */
+.projetos {
+  background-color: lightgray;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Disciplina */
+.disciplina {
+  display: flex;
+  background-color: lightblue;
+}
+
+.disciplina img {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .disciplina {
+    flex-direction: column;
+  }
+
+  .disciplina img {
+    width: 100%;
+  }
+}
+/* Menu das páginas da cidade */
+header nav,
+body > nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+header nav a,
+body > nav a {
+  padding: 10px 20px;
+  background-color: white;
+  color: #e00b0b;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 60px;
+  }
+
+  header nav,
+  body > nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    gap: 0;
+    background-color: white;
+  }
+
+  header nav a,
+  body > nav a {
+    flex: 1;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 0;
+    font-size: 14px;
+  }
+}
+/* Página multimédia */
+.sec-fotos,
+.sec-video,
+.sec-poesia {
+  height: 100vh;
+}
+
+.sec-fotos {
+  background-color: lightyellow;
+}
+
+.sec-video {
+  background-color: lightgreen;
+}
+
+.sec-poesia {
+  background-color: lightpink;
+}
+
+.sec-emblema {
+  position: relative;
+}
+
+.sec-emblema img {
+  width: 100%;
+}
+
+.sec-emblema p {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 5vw;
+  color: white;
+}
+/* Página de localização */
+.localizacao {
+  display: flex;
+  gap: 20px;
+}
+
+.localizacao p {
+  flex: 1;
+}
+
+.localizacao iframe {
+  flex: 1;
+  height: 400px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .localizacao {
+    flex-direction: column;
+  }
+}
+/* Página de informações */
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "texto tabela ."
+    "img1 tabela ."
+    ". curiosidades img2";
+}
+
+.texto {
+  grid-area: texto;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.tabela {
+  grid-area: tabela;
+}
+
+.curiosidades {
+  grid-area: curiosidades;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+main img {
+  width: 100%;
+}
