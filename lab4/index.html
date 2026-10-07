@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório 4</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="cabecalho">
+      <h1>Laboratório 4</h1>
+    </header>
+
+    <main>
+      <p id="texto" onmouseover="entrarTexto()" onmouseout="sairTexto()">
+        Passa o rato por cima desta frase.
+      </p>
+
+      <img src="images/fotografia.png" alt="Fotografia" width="300" />
+
+      <div id="caixa" onmousemove="mostrarPosicao(event)">
+        Mexe o rato dentro desta caixa.
+      </div>
+
+      <button onclick="adicionar()">Adicionar</button>
+      <button ondblclick="mudarCor()">Duplo clique para mudar a cor</button>
+      <p id="contador">0</p>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
