@@ -1,0 +1,4 @@
+main > div:first-child {color:red}
+div div:nth-child(2) {color:blue}
+div div+ div {color:green}
+div ~ p {color: purple}
