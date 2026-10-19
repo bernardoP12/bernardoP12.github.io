@@ -76,10 +76,6 @@ nav a {
   text-decoration: none;
 }
 
-.hero nav a {
-  color: white;
-}
-
 /* Projetos */
 .projetos {
   padding: 20px;
@@ -140,6 +136,10 @@ body > nav a {
   border-radius: 20px;
 }
 
+.hero nav a {
+  color: white;
+}
+
 @media (width <= 600px) {
   body {
     padding-bottom: 60px;
@@ -170,11 +170,6 @@ body > nav a {
 .sec-video,
 .sec-poesia {
   height: 100vh;
-}
-
-.sec-fotos,
-.sec-video,
-.sec-poesia {
   padding: 20px;
 }
 
@@ -235,7 +230,7 @@ body > nav a {
 }
 
 /* Página de informações */
-.info {
+main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
@@ -255,6 +250,8 @@ body > nav a {
 
 .tabela {
   grid-area: tabela;
+  border-collapse: collapse;
+  background-color: white;
 }
 
 .curiosidades {
@@ -270,11 +267,6 @@ body > nav a {
   border-radius: 10px;
 }
 
-.tabela {
-  border-collapse: collapse;
-  background-color: white;
-}
-
 .tabela,
 .tabela th,
 .tabela td {
@@ -284,16 +276,4 @@ body > nav a {
 .tabela th,
 .tabela td {
   padding: 8px;
-}
-
-@media (width <= 768px) {
-  .info {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "texto"
-      "img1"
-      "tabela"
-      "curiosidades"
-      "img2";
-  }
 }
