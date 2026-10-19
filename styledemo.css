@@ -1,0 +1,119 @@
+/*Tipo de seletores*/
+* {
+  margin: 0;
+}
+aside {
+  background: gray;
+}
+.destaque {
+  font-weight: bold;
+}
+#topo {
+  padding: 10px;
+}
+article[class="destaque"] {
+  border: 1px solid gray;
+}
+article:hover {
+  color: red;
+}
+article::first-letter {
+  font-size: 20px;
+}
+/*Composicao de seletores*/
+header, footer {
+  text-align: center;
+}
+main article{
+  font-family: Arial, sans-serif;
+}
+section > article {
+  line-height: 2;
+}
+nav + main {
+  background: gray;
+}
+header ~ footer {
+  background: green;
+}
+article.destaque {
+  background: yellow;
+}
+header#topo {
+  background: blue;
+}
+article.destaque:hover::first-letter {
+  color: blue;
+}
+/*Box Model*/
+article {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  background: lightblue;
+}
+/*Display Flex*/
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+/*Display Grid*/
+body{
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "nav nav"
+  "main aside"
+  "footer footer"
+}
+header{
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area : footer
+}
+/*Position*/
+.capa {
+  position: relative;
+}
+.capa img{
+  diplay: block;
+  width: 100%
+}
+.capa p{
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: red;
+}
+/*Media Queries*/
+@media (max-width: 600px) {
+  article {
+    font-size: 15px:
+    background: lightgreen;
+  }
+  body {
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer"
+  }
+}
