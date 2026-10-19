@@ -5,14 +5,14 @@
   width: 80vw;
 }
 
-.contentor div:last-child {
-  background-color: khaki;
-}
-
 div:nth-child(2) {
   position: relative;
   top: 10px;
   left: 20px;
+}
+
+.contentor div:last-child {
+  background-color: khaki;
 }
 
 .fora {
