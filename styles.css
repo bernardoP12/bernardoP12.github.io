@@ -1,5 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #b3b3b3;
+}
+
+header,
+main,
+footer {
+  padding: 0 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
 }
 
 .fotografias {
@@ -36,6 +53,10 @@ section {
   left: 10%;
 }
 
+.hero-texto p {
+  font-size: 2rem;
+}
+
 .cta {
   display: inline-block;
   padding: 10px 20px;
@@ -55,8 +76,13 @@ nav a {
   text-decoration: none;
 }
 
+.hero nav a {
+  color: white;
+}
+
 /* Projetos */
 .projetos {
+  padding: 20px;
   background-color: lightgray;
 }
 
@@ -70,11 +96,15 @@ nav a {
   width: 250px;
   padding: 20px;
   background-color: white;
+  border-radius: 10px;
 }
 
 /* Disciplina */
 .disciplina {
   display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
   background-color: lightblue;
 }
 
@@ -98,6 +128,7 @@ body > nav {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin: 20px 0;
 }
 
 header nav a,
@@ -139,6 +170,12 @@ body > nav a {
 .sec-video,
 .sec-poesia {
   height: 100vh;
+}
+
+.sec-fotos,
+.sec-video,
+.sec-poesia {
+  padding: 20px;
 }
 
 .sec-fotos {
@@ -228,8 +265,35 @@ body > nav a {
   grid-area: img2;
 }
 
+.img1,
+.img2 {
+  border-radius: 10px;
+}
+
+.tabela {
+  border-collapse: collapse;
+  background-color: white;
+}
+
 .tabela,
 .tabela th,
 .tabela td {
   border: 1px solid;
+}
+
+.tabela th,
+.tabela td {
+  padding: 8px;
+}
+
+@media (width <= 768px) {
+  .info {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "texto"
+      "img1"
+      "tabela"
+      "curiosidades"
+      "img2";
+  }
 }
