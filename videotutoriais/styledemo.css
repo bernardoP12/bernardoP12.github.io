@@ -105,7 +105,7 @@ footer {
 /*Media Queries*/
 @media (max-width: 600px) {
   article {
-    font-size: 15px:
+    font-size: 15px;
     background: lightgreen;
   }
   body {
