@@ -1,0 +1,17 @@
+main {
+  background-color: lavender;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
