@@ -1,0 +1,9 @@
+#produtos div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  padding: 15px;
+  background-color: lightblue;
+}
