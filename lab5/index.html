@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório 4</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <ol>
+        <li><span onmouseover="passar(this)">Passa por aqui!</span></li>
+        <li>
+          <span id="pinta">Pinta-me!</span>
+          <button type="button" onclick="pintar('red')">Red</button>
+          <button type="button" onclick="pintar('green')">Green</button>
+          <button type="button" onclick="pintar('blue')">Blue</button>
+        </li>
+        <li>
+          Experimenta escrever...
+          <input id="caixa" type="text" oninput="escrever()" />
+        </li>
+        <li>
+          Escolha uma cor em inglês:
+          <input id="cor" type="text" />
+          <button type="button" onclick="submeter()">submeter</button>
+        </li>
+        <li>
+          <button type="button" onclick="contar()">Conta!</button>
+          <span id="numero">0</span>
+        </li>
+      </ol>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
