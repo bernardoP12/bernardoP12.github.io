@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboratório 4</title>
+    <title>Laboratório 5</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -11,10 +11,14 @@
       <ol>
         <li><span onmouseover="passar(this)">Passa por aqui!</span></li>
         <li>
-          <span id="pinta">Pinta-me!</span>
-          <button type="button" onclick="pintar('red')">Red</button>
-          <button type="button" onclick="pintar('green')">Green</button>
-          <button type="button" onclick="pintar('blue')">Blue</button>
+          <span id="pinta">Dá-me cor!</span>
+          <button type="button" class="color" data-color="orange">
+            Orange
+          </button>
+          <button type="button" class="color" data-color="purple">
+            Purple
+          </button>
+          <button type="button" class="color" data-color="hotpink">Pink</button>
         </li>
         <li>
           Experimenta escrever...
@@ -22,13 +26,47 @@
         </li>
         <li>
           Escolha uma cor em inglês:
-          <input id="cor" type="text" />
-          <button type="button" onclick="submeter()">submeter</button>
+          <select onchange="mudarFundo(this)">
+            <option value="lavender">lavender</option>
+            <option value="yellow">yellow</option>
+            <option value="lightgreen">lightgreen</option>
+            <option value="lightblue">lightblue</option>
+            <option value="pink">pink</option>
+          </select>
         </li>
         <li>
           <button type="button" onclick="contar()">Conta!</button>
           <span id="numero">0</span>
         </li>
+        <li>
+          <select onchange="mudarDirecao(this)">
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">line</option>
+            <option value="column-reverse">line-reverse</option>
+          </select>
+          <div id="container">
+            <div class="bola"></div>
+            <div class="bola"></div>
+            <div class="bola"></div>
+            <div class="bola"></div>
+          </div>
+        </li>
+        <li>
+          <form>
+            <input id="nome" type="text" placeholder="insira o seu nome" />
+            <input id="idade" type="number" placeholder="insira a sua idade" />
+            <input type="submit" />
+          </form>
+          <p id="mensagem"></p>
+        </li>
+        <li>
+          <button type="button" id="mais">incrementar</button>
+          <button type="button" id="menos">decrementar</button>
+          <button type="button" id="zero">reset</button>
+          <span id="valor">0</span>
+        </li>
+        <li>Temporizador: <span id="tempo">0</span></li>
       </ol>
     </main>
     <script src="scripts/main.js"></script>

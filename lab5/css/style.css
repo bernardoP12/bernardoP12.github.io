@@ -6,3 +6,17 @@ body {
 li {
   margin-bottom: 60px;
 }
+
+#container {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+  background-color: gray;
+}
+
+.bola {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: orange;
+}
