@@ -3,9 +3,7 @@ const nodeInputNumero = document.querySelector(
   "#colecao ~ section input[type=number]",
 );
 // eslint-disable-next-line no-unused-vars
-const nodeInputSubmit = document.querySelector(
-  "#colecao ~ section input[type=submit]",
-);
+const nodeInputSubmit = document.querySelector("#colecao ~ section button");
 const nodeUlColecao = document.querySelector("#colecao ul");
 const nodeTotal = document.querySelector("#colecao h3 span");
 const nodeUlRepetidos = document.querySelector("#repetidos ul");
