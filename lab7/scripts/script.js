@@ -1,4 +1,5 @@
-// A. Estado e variáveis com referência de elementos do DOM
+/* global produtos */
+// A. Estado e Variáveis
 const nodeDivProdutos = document.querySelector("#produtos div");
 const nodeDivCesto = document.querySelector("#cesto div");
 const nodeTotal = document.querySelector("#cesto h3 span");
