@@ -20,6 +20,17 @@ function guardarCesto(lista) {
 function criarProduto(produto) {
   const article = document.createElement("article");
 
+  const imagem = document.createElement("img");
+  const campoImagem = Object.keys(produto).find(
+    (campo) =>
+      typeof produto[campo] === "string" &&
+      /\.(png|jpe?g|gif|webp|svg)/i.test(produto[campo]),
+  );
+  if (campoImagem) {
+    imagem.src = produto[campoImagem];
+  }
+  imagem.alt = produto.title;
+
   const titulo = document.createElement("h2");
   titulo.textContent = produto.title;
 
@@ -42,7 +53,7 @@ function criarProduto(produto) {
     atualizaCesto();
   });
 
-  article.append(titulo, descricao, preco, rating, botao);
+  article.append(imagem, titulo, descricao, preco, rating, botao);
   return article;
 }
 
