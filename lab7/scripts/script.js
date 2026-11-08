@@ -21,14 +21,7 @@ function criarProduto(produto) {
   const article = document.createElement("article");
 
   const imagem = document.createElement("img");
-  const campoImagem = Object.keys(produto).find(
-    (campo) =>
-      typeof produto[campo] === "string" &&
-      /\.(png|jpe?g|gif|webp|svg)/i.test(produto[campo]),
-  );
-  if (campoImagem) {
-    imagem.src = produto[campoImagem];
-  }
+  imagem.src = produto.image;
   imagem.alt = produto.title;
 
   const titulo = document.createElement("h2");
@@ -71,7 +64,7 @@ function criaProdutoCesto(produto) {
   botao.textContent = "Remover";
   botao.addEventListener("click", () => {
     const lista = lerCesto();
-    const indice = lista.findIndex((p) => p.title === produto.title);
+    const indice = lista.findIndex((p) => p.id === produto.id);
     lista.splice(indice, 1);
     guardarCesto(lista);
     atualizaCesto();
