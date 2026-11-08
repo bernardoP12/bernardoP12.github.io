@@ -21,19 +21,38 @@
     <main>
       <section id="produtos">
         <h2>Produtos</h2>
-        <div></div>
+        <div id="filtros">
+          <label for="categoria">Filtrar</label>
+          <select id="categoria">
+            <option value="">Todas as categorias</option>
+          </select>
+          <label for="ordem">Ordenar</label>
+          <select id="ordem">
+            <option value="">Ordenar pelo preço</option>
+            <option value="decrescente">Preço Decrescente</option>
+            <option value="crescente">Preço Crescente</option>
+          </select>
+          <label for="pesquisa">Procurar</label>
+          <input id="pesquisa" type="text" placeholder="pesquise por produto" />
+        </div>
+        <div id="lista"></div>
       </section>
       <section id="cesto">
         <h2>Cesto</h2>
-        <div></div>
-        <h3>Total: <span>0</span> €</h3>
+        <div id="cesto-lista"></div>
+        <h3>Total: <span id="total">0</span> €</h3>
+        <label for="estudante">És estudante do DEISI?</label>
+        <input id="estudante" type="checkbox" />
+        <label for="cupao">Cupão de desconto:</label>
+        <input id="cupao" type="text" />
+        <button id="comprar" type="button">Comprar</button>
+        <p id="resultado"></p>
       </section>
     </main>
 
     <footer>
       <p>2026, ULusófona</p>
     </footer>
-    <script src="scripts/produtos.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
