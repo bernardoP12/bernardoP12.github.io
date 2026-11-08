@@ -30,7 +30,7 @@ function criarProduto(produto) {
   preco.textContent = "Preço: " + produto.price;
 
   const rating = document.createElement("p");
-  rating.textContent = "Rating: " + produto.rating;
+  rating.textContent = "Rating: " + Object.values(produto.rating).join(" / ");
 
   const botao = document.createElement("button");
   botao.type = "button";

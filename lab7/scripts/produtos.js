@@ -1,4 +1,4 @@
-/* exported produtos */
+/* eslint-disable no-unused-vars */
 const produtos = [
   {
     id: 1,
