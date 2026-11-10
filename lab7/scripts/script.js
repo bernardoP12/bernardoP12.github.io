@@ -34,7 +34,13 @@ function criarProduto(produto) {
   const article = document.createElement("article");
 
   const imagem = document.createElement("img");
-  imagem.src = produto.image;
+  if (produto.image.startsWith("http")) {
+    imagem.src = produto.image;
+  } else if (produto.image.startsWith("/")) {
+    imagem.src = API + produto.image;
+  } else {
+    imagem.src = API + "/" + produto.image;
+  }
   imagem.alt = produto.title;
 
   const titulo = document.createElement("h2");
