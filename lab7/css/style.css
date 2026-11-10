@@ -1,15 +1,79 @@
-#produtos div {
-  display: flex;
-  flex-wrap: wrap;
+body {
+  font-family: Arial, sans-serif;
+  background: whitesmoke;
 }
 
-article {
+header,
+footer {
+  background: midnightblue;
+  color: white;
   padding: 15px;
-  background-color: lightblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: midnightblue;
+}
+
+#filtros {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select,
+input {
+  padding: 5px;
 }
 
 #lista,
 #cesto-lista {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+article {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+article img {
+  width: 100%;
+  height: 200px;
+}
+
+button {
+  background: midnightblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+button:hover {
+  background: steelblue;
+}
+
+#resultado {
+  font-weight: bold;
 }
